@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title>RainbProxy</title>
+  <link href="./popup.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <h1>Proxy Config</h1>
+  <div role="main">
+    <form id="proxyForm">
+	Introduce a proxy or proxy configuration list here.<br>
+	<textarea id="proxies" cols="69"></textarea>
+      <br>
+	  prepend "SOCKS","HTTP(S)" or PAC for each configuration.
+	  If you don't specify it, you can set defaults here.
+	  <select id="proxySchemeForAll">
+		      <option selected value="same">Use the same proxy for all protocols</option>
+              <option value="http">http</option>
+              <option value="https">https</option>
+              <option value="socks4">socks4</option>
+              <option value="socks5">socks5</option>
+      </select><br>
+	  <button id="save">Save proxies</button>
+	<br>
+	Choose a proxy
+	  <ul id="proxylist">
+	  </ul>
+	  <div id="proxsett"></div>
+    </form>
+  </div>
+  <script src="./proxy_form_controller2.js"></script>
+  <script src="./popup.js"></script>
+</body>
+</html>
